@@ -273,6 +273,9 @@ class _PagedVerticalCalendarState extends State<PagedVerticalCalendar> {
               sliver: PagedSliverList(
                 pagingController: _pagingReplyDownController,
                 builderDelegate: PagedChildBuilderDelegate<Month>(
+                  newPageProgressIndicatorBuilder: (_) {
+                    return Container();
+                  },
                   itemBuilder: (BuildContext context, Month month, int index) {
                     return _MonthView(
                         month: month,
